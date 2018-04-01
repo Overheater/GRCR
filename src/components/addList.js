@@ -22,9 +22,9 @@ import {
   FlatList,
 } from 'react-native';
 import  { TabNavigator,StatusBar,navigationOptions } from 'react-navigation';
-export default class BrowseList extends Component {
+export default class AddList extends Component {
     static navigationOptions = {
-      title: 'all lists',
+      title: 'Lists',
       headerStyle: {
         backgroundColor: '#f4511e',
       },
@@ -36,7 +36,7 @@ export default class BrowseList extends Component {
     render(){
         return(
           <Container>
-            <Text>all lists are shown here</Text>
+            <Text>add list page</Text>
         </Container>
         );
         }

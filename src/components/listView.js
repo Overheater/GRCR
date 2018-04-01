@@ -24,7 +24,7 @@ import {
 import  { TabNavigator,StatusBar,navigationOptions } from 'react-navigation';
 export default class ListView extends Component {
     static navigationOptions = {
-      title: 'Lists',
+      title: ' single Lists',
       headerStyle: {
         backgroundColor: '#f4511e',
       },
@@ -36,7 +36,7 @@ export default class ListView extends Component {
     render(){
         return(
           <Container>
-            <Text>list page</Text>
+            <Text>list of groceries goes here</Text>
         </Container>
         );
         }
