@@ -23,6 +23,11 @@ import {
 } from 'react-native';
 import  { TabNavigator,StatusBar,navigationOptions } from 'react-navigation';
 export default class ListView extends Component {
+  constructor(props)
+  {
+    super(props);
+    this.state = { text: '',listnum:0};
+  }
     static navigationOptions = {
       title: ' single Lists',
       headerStyle: {
@@ -36,8 +41,23 @@ export default class ListView extends Component {
     render(){
         return(
           <Container>
-            <Text>list of groceries goes here</Text>
-        </Container>
+          <Content>
+            <Text>
+              add a items by using the text input,also shows the entire single list
+            </Text>
+          </Content>
+          <Footer>
+            <FooterTab>
+              <TextInput
+              style={{width: 200,height: 55, borderBottomColor: Platform.OS === 'ios' ? 'black' : null, borderBottomWidth: Platform.OS === 'ios' ? 1 : null}}
+              placeholder='Input your list name here'
+              value={this.state.text}
+              onChangeText={(intext) => this.setState({text:intext})}
+              onSubmitEditing={()=>localStorage.add(listnum,text)}
+              />
+            </FooterTab>
+          </Footer>
+          </Container>
         );
         }
         }
